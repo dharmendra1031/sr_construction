@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1254 1254" role="img" aria-label="SR Construction gold skyline logo">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffdc21"/>
+      <stop offset="0.72" stop-color="#ffcb14"/>
+      <stop offset="0.93" stop-color="#fbbb08"/>
+      <stop offset="1" stop-color="#ffdb25"/>
+    </linearGradient>
+  </defs>
+  <path fill="#000" d="M0 0h1254v1254H0z"/>
+  <path fill="url(#gold)" fill-rule="evenodd" d="M672 43 590 122 388 299 388 609 447 564 447 323 610 185 610 1052 570 1053 570 489 252 729 253 1071 313 1060 313 753 513 606 513 1056 404 1066 295 1082 197 1102 91 1131 322 1111 612 1102 771 1104 936 1111 1158 1131 1053 1102 973 1085 973 491 711 276 711 1054 672 1053Z M765 393 915 515 914 1075 764 1057Z"/>
+</svg>
