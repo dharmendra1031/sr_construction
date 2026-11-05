@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17212c">
+  <meta name="description" content="SR Construction management system — frontend screen preview">
+  <title>SR Construction | Management Workspace</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <div class="sidebar-brand">
+        <img class="brand-mark" src="assets/logo.svg" width="42" height="42" alt="SR Construction logo">
+        <div class="brand-copy">
+          <strong>SR CONSTRUCTION</strong>
+          <span>Building operations</span>
+        </div>
+        <button class="btn sidebar-close d-lg-none" type="button" id="closeMenu" aria-label="Close navigation">
+          <i class="bi bi-x-lg"></i>
+        </button>
+      </div>
+      <nav class="sidebar-navigation" id="primaryNav"></nav>
+      <div class="sidebar-footer">
+        <div class="user-badge">SC</div>
+        <div class="footer-user">
+          <strong>Site Administrator</strong>
+          <span>Frontend preview</span>
+        </div>
+        <i class="bi bi-three-dots-vertical footer-dots" aria-hidden="true"></i>
+      </div>
+    </aside>
+    <div class="mobile-scrim" id="menuScrim"></div>
+    <div class="main-shell">
+      <header class="topbar">
+        <button class="icon-button d-lg-none" id="openMenu" type="button" aria-label="Open navigation">
+          <i class="bi bi-list"></i>
+        </button>
+        <div class="topbar-location" id="topbarLocation">Workspace / Overview</div>
+        <div class="topbar-spacer"></div>
+        <div class="topbar-project">
+          <label class="visually-hidden" for="activeProject">Filter project</label>
+          <i class="bi bi-buildings" aria-hidden="true"></i>
+          <select id="activeProject" aria-label="Current project">
+            <option value="">All projects</option>
+            <option value="Greenfield Residences">Greenfield Residences</option>
+            <option value="Metro Tower Phase II">Metro Tower Phase II</option>
+            <option value="Lakeside Villas">Lakeside Villas</option>
+          </select>
+          <i class="bi bi-chevron-down select-chevron" aria-hidden="true"></i>
+        </div>
+        <span class="preview-tag"><span class="preview-dot"></span> UI PREVIEW</span>
+        <span class="topbar-divider"></span>
+        <button class="icon-button help-button" type="button" id="helpButton" title="About this preview" aria-label="About this preview"><i class="bi bi-info-circle"></i></button>
+        <div class="top-avatar" title="Site Administrator">SC</div>
+      </header>
+      <main class="content-shell" id="content" tabindex="-1" aria-live="polite"></main>
+      <footer class="app-footer">
+        <span>© 2026 SR Construction</span>
+        <span>Interface prototype · Sample data only</span>
+      </footer>
+    </div>
+  </div>
+
+  <div class="offcanvas offcanvas-end record-drawer" tabindex="-1" id="recordDrawer" aria-labelledby="recordDrawerTitle">
+    <div class="offcanvas-header drawer-header">
+      <div>
+        <div class="section-eyebrow" id="recordDrawerGroup">SR Construction</div>
+        <h2 class="offcanvas-title" id="recordDrawerTitle">Create record</h2>
+      </div>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body drawer-body">
+      <form id="recordForm">
+        <div id="recordFormFields" class="row g-3"></div>
+        <p class="form-preview-message"><i class="bi bi-info-circle"></i> This is a frontend preview. No data will be saved.</p>
+        <div class="drawer-actions">
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Cancel</button>
+          <button type="submit" class="btn btn-primary"><i class="bi bi-check2 me-2"></i>Validate form</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="modal fade" id="detailModal" tabindex="-1" aria-labelledby="detailModalTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content detail-modal">
+        <div class="modal-header">
+          <h2 class="modal-title fs-5" id="detailModalTitle">Record details</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body" id="detailModalBody"></div>
+        <div class="modal-footer">
+          <span class="me-auto text-secondary small">Read-only demo record</span>
+          <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast-container position-fixed bottom-0 end-0 p-3" id="toastContainer" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
